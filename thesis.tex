@@ -1,0 +1,75 @@
+
+\documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
+               headinclude,footinclude,BCOR5mm,%
+               numbers=noenddot,cleardoublepage=empty,%
+               tablecaptionabove]{scrreprt}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[utf8]{inputenc} 
+\usepackage[square]{natbib}
+% \usepackage{subfig} 
+\usepackage{subcaption} 
+\usepackage[ruled,lined,algochapter,linesnumbered]{algorithm2e}
+\usepackage{chngpage}
+\usepackage{calc}
+\usepackage{listings}
+\usepackage{ccicons} 
+\usepackage{xspace} 
+
+\usepackage[dottedtoc,eulerchapternumbers,pdfspacing,linedheaders]{classicthesis}
+\usepackage{arsclassica}
+
+\input{mysettings}
+
+\begin{document}
+\pagenumbering{roman}
+\pagestyle{plain}
+
+%******************************************************************
+% Frontmatter
+%******************************************************************
+\input{front/titlepage}
+\clearpage
+\input{front/titleback}
+\clearpage
+\input{front/abstract}
+\input{front/acknow}
+\pagestyle{scrheadings} 
+\clearpage
+\input{front/contents}
+\cleardoublepage
+
+%******************************************************************
+% Mainmatter
+%******************************************************************
+\pagenumbering{arabic}
+\input{chapters/introduction}
+\input{chapters/relatedwork}
+
+% *****************************************************************
+% Backmatter
+%******************************************************************
+\appendix
+
+\cleardoublepage
+\include{appendices/reflection}
+
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\clearpage
+\bibliographystyle{abbrvnat}
+\bibliography{myreferences}
+
+\clearpage
+\include{back/colophon}
+% \clearpage
+% \input{back/Index}
+
+\end{document}
+
+
+
+
+
