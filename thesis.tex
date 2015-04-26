@@ -1,8 +1,7 @@
 
 \documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
                headinclude,footinclude,BCOR5mm,%
-               numbers=noenddot,cleardoublepage=empty,%
-               tablecaptionabove]{scrreprt}
+               numbers=noenddot,cleardoublepage=empty]{scrreprt}
 
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsthm}
@@ -17,6 +16,8 @@
 \usepackage{ccicons} 
 \usepackage{xspace} 
 \usepackage{booktabs} 
+\usepackage[english]{babel}  
+\usepackage{acronym}
 
 \usepackage[dottedtoc,eulerchapternumbers,pdfspacing,linedheaders]{classicthesis}
 \usepackage{arsclassica}
@@ -39,6 +40,8 @@
 \pagestyle{scrheadings} 
 \clearpage
 \input{front/contents}
+\clearpage
+\input{front/acronyms}
 \cleardoublepage
 
 %******************************************************************
@@ -53,15 +56,16 @@
 %******************************************************************
 \appendix
 
+%%%
+%- bibliography
+\bibliographystyle{abbrvnat}
+\bibliography{myreferences}
+
+%%%
+%- the mandatory reflection can be put as an Appendix
 \cleardoublepage
 \include{appendices/reflection}
 
-%********************************************************************
-% Other Stuff in the Back
-%*******************************************************
-\clearpage
-\bibliographystyle{abbrvnat}
-\bibliography{myreferences}
 
 \clearpage
 \include{back/colophon}

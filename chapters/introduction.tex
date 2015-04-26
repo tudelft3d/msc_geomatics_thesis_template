@@ -64,14 +64,14 @@ As shown in Figure~\ref{fig:sidebyside},
     \includegraphics[width=\linewidth]{figs/lod1.png}
     \caption{}\label{fig:sidebyside:2}
   \end{subfigure}%
-  \caption[Shorten title for the list of figures]{Two figures side-by-side. (a) A triangulation of 2 polygons. (b) Something not related at all.}
+  \caption[Shortened title for the list of figures]{Two figures side-by-side. (a) A triangulation of 2 polygons. (b) Something not related at all.}
 \label{fig:sidebyside}
 \end{figure}
 it is possible to have two figures (or more) side by side.
 You can also refer to a subfigure: see Figure~\ref{fig:sidebyside:2}.
 
 
-\subsection{Figures in PDF are possible}
+\subsection[Shorter section name for the TOC]{Figures in PDF are possible and even encouraged!}
 
 If you use Adobe Illustrator or Ipe you can make your figures vectorial and save them in PDF\@.
 
@@ -116,7 +116,6 @@ The package \texttt{booktabs} permits you to make nicer tables than the basic on
 See for instance Table~\ref{tab:example}.
 \begin{table}
   \centering
-  \caption{Details concerning the datasets used for the experiments.}
   \begin{tabular}{@{}lrrcrrc@{}} \toprule
     & \multicolumn{2}{c}{3D model} && \multicolumn{2}{c}{input} \\
     \cmidrule{2-3}  \cmidrule{5-6} 
@@ -127,7 +126,8 @@ See for instance Table~\ref{tab:example}.
     \textbf{engelen} & 1~629 & 15~870 && 23~732 & 15~868 \\ 
     \bottomrule
    \end{tabular}
-   \label{tab:example}
+  \caption{Details concerning the datasets used for the experiments.}
+\label{tab:example}
 \end{table}
 
 
@@ -162,7 +162,20 @@ All your algorithms will be automatically added to the list of algorithms at the
       \Return{$\tau_r$ = $\tau$}
     }
   }
-  \caption{W\textsc{alk} ($\mathcal{T}$, $\tau$, $p$)}
+  \caption[W\textsc{alk}]{W\textsc{alk} ($\mathcal{T}$, $\tau$, $p$)}
 \label{alg:walk}
 \end{algorithm}
 Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the Algorithm~\ref{alg:walk} this is happening.
+
+%%%
+%
+\section{Acronyms}
+\label{sec:acronyms}
+
+If you want to have a list of acronyms you use in your thesis, use the \texttt{acronym} package.
+The first time you speak about \ac{gis}, it will be spelled out. 
+Further use, \ac{gis}, you'll get the acronym plus a hyperlink to the list in the preambule of the thesis.
+
+Add yours to \texttt{front/acronyms.tex}.
+
+
