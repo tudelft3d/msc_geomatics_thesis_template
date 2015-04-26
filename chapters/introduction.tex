@@ -43,12 +43,16 @@ The next Chapter (\nameref{chap:rw}), is on page~\pageref{chap:rw}.
 \section{Figures}
 \label{sec:figures}
 
+Figures~\ref{fig:sometriangles} is a simple figure.
 \begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{figs/sometriangles.png}
   \caption{One nice figure}
 \label{fig:sometriangles}
 \end{figure}
+It is recommended \emph{not} to force-place your figures (\eg\ with commands such \texttt{\newpage} or by forcing a figure to be at the top of a page).
+\LaTeX\ usually places the figures automatically rather well.
+Only if at the end of your thesis you have small problem then can you solve them.
 
 As shown in Figure~\ref{fig:sidebyside},
 \begin{figure}
@@ -146,8 +150,7 @@ See for instance Table~\ref{tab:example}.
 \label{sec:code}
 
 Please avoid putting code (Python, C++, Fortran) in your thesis.
-Even in the appendices it is according to me rather useless: no one reads code on paper. 
-
+Small excerpt are probably fine (for some cases), but do not put all the code in an appendix.
 Instead, put your code somewhere online (\eg\ GitHub) and put \emph{pseudo-code} in your thesis.
 The package \texttt{algorithm2e} is pretty handy, see for instance the Algorithm~\ref{alg:walk}.
 All your algorithms will be automatically added to the list of algorithms at the begining of the thesis.
@@ -176,6 +179,36 @@ All your algorithms will be automatically added to the list of algorithms at the
 \label{alg:walk}
 \end{algorithm}
 Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the Algorithm~\ref{alg:walk} this is happening.
+
+If you want to put some code (or XML for instance), use the package \texttt{listings}, \eg\ you can wrap it in a Figure so that it does not span over multiple pages.
+\begin{figure}
+\begin{footnotesize}
+\begin{lstlisting}
+<gml:Solid>
+  <gml:exterior>
+    <gml:CompositeSurface>
+      <gml:surfaceMember>
+        <gml:Polygon>
+          <gml:exterior>
+            <gml:LinearRing>
+              <gml:pos>0.000000 0.000000 1.000000</gml:pos>
+              <gml:pos>1.000000 0.000000 1.000000</gml:pos>
+              <gml:pos>1.000000 1.000000 1.000000</gml:pos>
+              <gml:pos>0.000000 1.000000 1.000000</gml:pos>
+              <gml:pos>0.000000 0.000000 1.000000</gml:pos>
+            </gml:LinearRing>
+          </gml:exterior>
+          <gml:interior>
+          ...
+      </gml:surfaceMember>
+    </gml:CompositeSurface>
+  </gml:interior>
+</gml:Solid>
+\end{lstlisting}
+\end{footnotesize}
+\caption{Some GML for a \texttt{gml:Solid}.}
+\label{fig:codegml}
+\end{figure}
 
 %%%
 %
