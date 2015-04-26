@@ -1,6 +1,5 @@
-%*******************************************************
-% Titleback
-%*******************************************************
+%!TEX root = ../thesis.tex
+
 \thispagestyle{empty}
 
 \hfill
@@ -19,11 +18,28 @@
 % \hrule
 % \vspace{1.5em}
 
-\noindent\textsc{The work in this thesis was made in the:}\\
-\myGroup\\
-\myDepartment\\
-\myFaculty\\
-\myUni\\
+\noindent\emph{The work in this thesis was made in the:}\\
+
+\begin{tabular}{ll}
+\parbox{0.3\textwidth}{\includegraphics[width=\linewidth]{\myGroupLogo}}
+&
+\parbox{0.7\textwidth}
+{
+  \myGroup\\
+  \myDepartment\\
+  \myFaculty\\
+  \myUni\\
+}       
+\end{tabular}
+
+% \noindent\rule{0.3\linewidth}{0.1mm}
+% \newline
+% \hrule
+
+% \myGroup\\
+% \myDepartment\\
+% \myFaculty\\
+% \myUni\\
 
 \vspace{3em}
 % \vspace{1.5em}
@@ -38,10 +54,3 @@ Supervisors:  &  \myProf \\
 Co-reader:    &  \myCoreader\\
 \end{tabular}
 
-
-
-% \vspace{1cm}
-% \hrule
-% \bigskip
-
-% \noindent The titlepage reproduces an engraving of Maurits Cornelis Escher, titled \emph{Plane Filling with Birds} (the picture is obtained from \url{http://www.mcescher.com/}).

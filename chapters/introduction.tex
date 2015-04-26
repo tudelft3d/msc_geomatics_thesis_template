@@ -1,25 +1,47 @@
 %!TEX root = ../thesis.tex
 
 \chapter{Introduction}
-\label{sec:introduction}
+\label{chap:introduction}
 
 
 This is a complete template for the MSc Geomatics thesis.
 It contains all the parts that are required and is structured in such a way that most/all supervisors expect.
-Observe that the MSc Geomatics at TU Delft has no requirements, so I took the liberty of formatting it the way I like. 
-Well, I simply took the template \texttt{arsclassica} (by Lorenzo Pantieri), which is an adaption of the original \texttt{classicthesis} package from André Miede, and structured it in such a way that all sections are present.
+Observe that the MSc Geomatics at TU Delft has no formal requirements (except the reflection part, which I put as an Appendix), so I took the liberty of formatting it the way I like. 
+I basically took the template \texttt{arsclassica} (by Lorenzo Pantieri), which is an adaption of the original \texttt{classicthesis} package from André Miede, added the front/back matters (cover page, copyright, abstract, etc.), and gave examples for the insertion of figures, tables and algorithms.
 
 \emph{It is not an official template and it is not mandatory to use it.}
 
-But I hope it will encourage everyone the use of \LaTeX, and I also hope that it will discourage students to use Word\ldots
+But I hope it will encourage everyone the use of \LaTeX\ for writing their thesis, and I also hope that it will \emph{discourage} some from using Word\ldots 
 
 If you run into mistakes/problems/issues, please report them on the GitHub page, and if you fix an error, then please submit a pull request. 
 
 \url{https://github.com/tudelft3d/MScGeomaticsThesisTemplate}.
 
 
+%%%
+%
+\section{How to get started with \LaTeX?}
+\label{sec:startlatex}
 
+Basically everything you need to know---from installation to details---is there:\\
+\url{http://en.wikibooks.org/wiki/LaTeX}
+
+To compile this template, you need a full installation of MiKTeX or TeXLive or MacTeX.
+
+
+%%%
+%
+\section{Cross-references}
+
+Chapter~\ref{chap:introduction} is what you're currently reading, and its name is \nameref{chap:introduction}.
+Section~\ref{sec:code} is about pseudo-code.
+The next Chapter (\nameref{chap:rw}), is on page~\pageref{chap:rw}.
+
+
+%%%
+%
 \section{Figures}
+\label{sec:figures}
 
 \begin{figure}
   \centering
@@ -42,63 +64,105 @@ As shown in Figure~\ref{fig:sidebyside},
     \includegraphics[width=\linewidth]{figs/lod1.png}
     \caption{}\label{fig:sidebyside:2}
   \end{subfigure}%
-  \caption{Two figures side-by-side.}\label{fig:sidebyside}
+  \caption[Shorten title for the list of figures]{Two figures side-by-side. (a) A triangulation of 2 polygons. (b) Something not related at all.}
+\label{fig:sidebyside}
 \end{figure}
 it is possible to have two figures (or more) side by side.
 You can also refer to a subfigure: see Figure~\ref{fig:sidebyside:2}.
 
 
-\subsection{Figures in PDF are possible (and better)}
+\subsection{Figures in PDF are possible}
 
 If you use Adobe Illustrator or Ipe you can make your figures vectorial and save them in PDF\@.
+
 You include a PDF the same way as you do for a PNG, see Figure~\ref{fig:pdffig},
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.2\linewidth}
+  \begin{subfigure}[b]{0.28\linewidth}
     \centering
     \includegraphics[page=1,width=\linewidth]{figs/tricat.pdf}
-    \caption{}\label{fig:pdffig:1}
+    \caption{2 polygons}\label{fig:pdffig:1}
   \end{subfigure}%
   \qquad %-- that adds some space between th 2 figures
-  \begin{subfigure}[b]{0.2\linewidth}
+  \begin{subfigure}[b]{0.28\linewidth}
     \centering
     \includegraphics[page=2,width=\linewidth]{figs/tricat.pdf}
-    \caption{}\label{fig:pdffig:2}
+    \caption{CDT }\label{fig:pdffig:2}
   \end{subfigure}%
   \qquad %-- that adds some space between th 2 figures
-  \begin{subfigure}[b]{0.2\linewidth}
+  \begin{subfigure}[b]{0.28\linewidth}
     \centering
     \includegraphics[page=3,width=\linewidth]{figs/tricat.pdf}
-    \caption{}\label{fig:pdffig:3}
+    \caption{with colours}\label{fig:pdffig:3}
   \end{subfigure}%
-  \caption{Three PDF figures side-by-side.}\label{fig:pdffig}
+  \caption{Three PDF figures.}
+\label{fig:pdffig}
 \end{figure}
 
 
-
+%%%
+%
 \section{How to add references?}
 
-\citet{Descartes37} wrote and another one too~\citep{Voronoi08,Delaunay34}.
+\citet{Descartes37} wrote and another one too~\citep{Voronoi08}.
+Instead of citing the whole paper~\citep{Delaunay34}, it is also possible to cite only the authors (\eg\ \citeauthor{Delaunay34}).
 
 
+%%%
+%
+\section{Tables}
+
+The package \texttt{booktabs} permits you to make nicer tables than the basic ones in \LaTeX.
+See for instance Table~\ref{tab:example}.
+\begin{table}
+  \centering
+  \caption{Details concerning the datasets used for the experiments.}
+  \begin{tabular}{@{}lrrcrrc@{}} \toprule
+    & \multicolumn{2}{c}{3D model} && \multicolumn{2}{c}{input} \\
+    \cmidrule{2-3}  \cmidrule{5-6} 
+    & solids & faces && vertices & constraints  \\ 
+    \toprule
+    \textbf{campus}  & 370   & 4~298  && 5~970  & 3~976   \\
+    \textbf{kvz}     & 637   & 6~549  && 8~951  & 13~571  \\
+    \textbf{engelen} & 1~629 & 15~870 && 23~732 & 15~868 \\ 
+    \bottomrule
+   \end{tabular}
+   \label{tab:example}
+\end{table}
+
+
+
+%%%
+%
 \section{Pseudo-code}
+\label{sec:code}
 
 Please try to not put code (Python, C++, Fortran) in your thesis.
 Put pseudo-code instead.
-The package \texttt{algorithm2e} is pretty handy, see for instance the Algorithm~\ref{alg:myfirst}.
-\begin{algorithm}[h]
- \KwData{this text}
- \KwResult{how to write algorithm with \LaTeX2e }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
- \caption{How to write algorithms}\label{alg:myfirst}
-\end{algorithm}
+The package \texttt{algorithm2e} is pretty handy, see for instance the Algorithm~\ref{alg:walk}.
 All your algorithms will be automatically added to the list of algorithms at the begining of the thesis.
+\begin{algorithm}
+  \KwIn{A Delaunay tetrahedralization $\mathcal{T}$, a starting tetrahedron $\tau$, and a query point $p$}
+  \KwOut{$\tau_r$: the tetrahedron in $\mathcal{T}$ containing $p$}
+  \BlankLine
+  \While{$\tau_r$ not found}
+  {
+    \For{$i \leftarrow 0$ \KwTo 3}
+    {
+      $\sigma_i \leftarrow$ get face opposite vertex $i$ in $\tau$\;
+      \If{Orient($\sigma_i, p$) $< 0$\nllabel{l:walk}} 
+      {
+        $\tau \leftarrow$ get neighbouring tetrahedron of $\tau$ incident to $\sigma_i$\;
+        break\;
+      }
+    }  
+    \If{$i=3$}
+    {
+      \tcp{all the faces of $\tau$ have been tested}
+      \Return{$\tau_r$ = $\tau$}
+    }
+  }
+  \caption{W\textsc{alk} ($\mathcal{T}$, $\tau$, $p$)}
+\label{alg:walk}
+\end{algorithm}
+Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the Algorithm~\ref{alg:walk} this is happening.
