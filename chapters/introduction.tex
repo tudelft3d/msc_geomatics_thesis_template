@@ -26,7 +26,7 @@ If you run into mistakes/problems/issues, please report them on the GitHub page,
 Basically everything you need to know---from installation to details---is there:\\
 \url{http://en.wikibooks.org/wiki/LaTeX}
 
-To compile this template, you need a full installation of MiKTeX or TeXLive or MacTeX.
+To compile this template, you need a full installation of \href{http://miktex.org/about}{MiKTeX} (Windows) or \href{https://www.tug.org/texlive/}{TeXLive} (cross-platform) or \href{https://tug.org/mactex/}{MacTeX} (OSX). 
 
 
 %%%
@@ -50,7 +50,7 @@ Figures~\ref{fig:sometriangles} is a simple figure.
   \caption{One nice figure}
 \label{fig:sometriangles}
 \end{figure}
-It is recommended \emph{not} to force-place your figures (\eg\ with commands such \texttt{\newpage} or by forcing a figure to be at the top of a page).
+It is recommended \emph{not} to force-place your figures (\eg\ with commands such as: \texttt{\textbackslash newpage} or by forcing a figure to be at the top of a page).
 \LaTeX\ usually places the figures automatically rather well.
 Only if at the end of your thesis you have small problem then can you solve them.
 
@@ -109,7 +109,8 @@ You include a PDF the same way as you do for a PNG, see Figure~\ref{fig:pdffig},
 \section{How to add references?}
 
 References are best handled using Bib\TeX.
-See the \texttt{myreferences.bib} file.
+See the \texttt{myreferences.bib} file. 
+A good cross-platform reference manager is \href{http://jabref.sourceforge.net/}{JabRef}.
 
 \citet{Descartes37} wrote this and that~\citep{Voronoi08,Delaunay34}.
 Instead of citing the whole paper~\citep{Delaunay34}, it is also possible to cite only the authors (\eg\ \citeauthor{Delaunay34}).
