@@ -13,6 +13,6 @@ But we hope it will encourage everyone to use LaTeX for writing their thesis, an
 
 ## How to get started with LaTeX?
 
-Basically everything you need to know---from installation to details---is there available in the [free book](http://en.wikibooks.org/wiki/LaTeX).
+Basically everything you need to know---from installation to details---is there available in [this free book](http://en.wikibooks.org/wiki/LaTeX).
 
-To compile this template, you need a full installation of [http://miktex.org/about](MiKTeX) (Windows) or [https://www.tug.org/texlive/](TeXLive) (cross-platform) or [https://tug.org/mactex/](MacTeX) (OSX). 
+To compile this template, you need a full installation of [MiKTeX](http://miktex.org/about) (Windows) or [TeXLive](https://www.tug.org/texlive) (cross-platform) or [MacTeX](https://tug.org/mactex) (OSX). 
