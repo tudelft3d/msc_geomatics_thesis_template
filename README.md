@@ -1,8 +1,6 @@
 # MScGeomaticsThesisTemplate
 
-A template for the TU Delft MSc Geomatics thesis
-
-This is a complete template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
+A complete template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
 
 It contains all the parts that are required and is structured in such a way that most/all supervisors expect.
 Observe that the MSc Geomatics at TU Delft has no formal requirements (except the reflection part, which is put here as an Appendix, but it can also be submitted as a separate document), how the document looks like (fonts, margins, headers, etc) is entirely up to you. 
