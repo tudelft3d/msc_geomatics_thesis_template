@@ -33,9 +33,11 @@ To compile this template, you need a full installation of \href{http://miktex.or
 %
 \section{Cross-references}
 
-Chapter~\ref{chap:introduction} is what you are currently reading, and its name is \nameref{chap:introduction}.
-Section~\ref{sec:code} is about pseudo-code.
-The next Chapter (\nameref{chap:rw}), is on page~\pageref{chap:rw}.
+The command \texttt{autoref} can be used for chapters, sections, subsections, figures, tables, etc.
+
+\autoref{chap:introduction} is what you are currently reading, and its name is \nameref{chap:introduction}.
+\autoref{sec:code} is about pseudo-code, and \autoref{sec:pdf} is about something else.
+The next chapter (\nameref{chap:rw}), is on page~\pageref{chap:rw}.
 
 
 %%%
@@ -54,7 +56,7 @@ It is recommended \emph{not} to force-place your figures (\eg\ with commands suc
 \LaTeX\ usually places the figures automatically rather well.
 Only if at the end of your thesis you have small problem then can you solve them.
 
-As shown in Figure~\ref{fig:sidebyside},
+As shown in \autoref{fig:sidebyside},
 \begin{figure}
   \centering
   \begin{subfigure}[b]{0.45\linewidth}
@@ -72,14 +74,15 @@ As shown in Figure~\ref{fig:sidebyside},
 \label{fig:sidebyside}
 \end{figure}
 it is possible to have two figures (or more) side by side.
-You can also refer to a subfigure: see Figure~\ref{fig:sidebyside:2}.
+You can also refer to a subfigure: see \autoref{fig:sidebyside:2}.
 
 
 \subsection[Shorter section name for the TOC]{Figures in PDF are possible and even encouraged!}
+\label{sec:pdf}
 
 If you use Adobe Illustrator or \href{http://ipe7.sourceforge.net}{Ipe} you can make your figures vectorial and save them in PDF\@.
 
-You include a PDF the same way as you do for a PNG, see Figure~\ref{fig:pdffig},
+You include a PDF the same way as you do for a PNG, see \autoref{fig:pdffig},
 \begin{figure}
   \centering
   \begin{subfigure}[b]{0.28\linewidth}
@@ -126,7 +129,7 @@ Footnotes are a good way to write text that is not essential for the understandi
 \section{Tables}
 
 The package \texttt{booktabs} permits you to make nicer tables than the basic ones in \LaTeX.
-See for instance Table~\ref{tab:example}.
+See for instance \autoref{tab:example}.
 \begin{table}
   \centering
   \begin{tabular}{@{}lrrcrrc@{}} \toprule
@@ -153,7 +156,7 @@ See for instance Table~\ref{tab:example}.
 Please avoid putting code (Python, C++, Fortran) in your thesis.
 Small excerpt are probably fine (for some cases), but do not put all the code in an appendix.
 Instead, put your code somewhere online (\eg\ GitHub) and put \emph{pseudo-code} in your thesis.
-The package \texttt{algorithm2e} is pretty handy, see for instance the Algorithm~\ref{alg:walk}.
+The package \texttt{algorithm2e} is pretty handy, see for instance the \autoref{alg:walk}.
 All your algorithms will be automatically added to the list of algorithms at the begining of the thesis.
 \begin{algorithm}
   \KwIn{A Delaunay tetrahedralization $\mathcal{T}$, a starting tetrahedron $\tau$, and a query point $p$}
@@ -179,7 +182,7 @@ All your algorithms will be automatically added to the list of algorithms at the
   \caption[W\textsc{alk}]{W\textsc{alk} ($\mathcal{T}$, $\tau$, $p$)}
 \label{alg:walk}
 \end{algorithm}
-Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the Algorithm~\ref{alg:walk} this is happening.
+Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the \autoref{alg:walk} this is happening.
 
 If you want to put some code (or XML for instance), use the package \texttt{listings}, \eg\ you can wrap it in a Figure so that it does not span over multiple pages.
 \begin{figure}
