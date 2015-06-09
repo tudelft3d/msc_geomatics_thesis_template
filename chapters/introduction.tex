@@ -52,6 +52,9 @@ Figures~\ref{fig:sometriangles} is a simple figure.
   \caption{One nice figure}
 \label{fig:sometriangles}
 \end{figure}
+Notice that all figures in your thesis should be referenced to in the main text.
+The same applies to tables and algorithms.
+
 It is recommended \emph{not} to force-place your figures (\eg\ with commands such as: \texttt{\textbackslash newpage} or by forcing a figure to be at the top of a page).
 \LaTeX\ usually places the figures automatically rather well.
 Only if at the end of your thesis you have small problem then can you solve them.
@@ -59,13 +62,13 @@ Only if at the end of your thesis you have small problem then can you solve them
 As shown in \autoref{fig:sidebyside},
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.45\linewidth}
+  \begin{subfigure}[b]{0.3\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{figs/sometriangles.png}
+    \includegraphics[angle=90,width=\linewidth]{figs/sometriangles.png}
     \caption{}\label{fig:sidebyside:1}
   \end{subfigure}%
   \qquad %-- that adds some space between th 2 figures
-  \begin{subfigure}[b]{0.45\linewidth}
+  \begin{subfigure}[b]{0.6\linewidth}
     \centering
     \includegraphics[width=\linewidth]{figs/lod1.png}
     \caption{}\label{fig:sidebyside:2}
@@ -146,6 +149,22 @@ See for instance \autoref{tab:example}.
 \label{tab:example}
 \end{table}
 
+
+%%%
+%
+\section{Plots}
+
+The best way is to use \href{http://matplotlib.org}{matplotlib}, or its more beautiful version (\href{http://stanford.edu/~mwaskom/software/seaborn/index.html}{seaborn}).
+With these, you can use Python to generate nice PDF plots, such as that in Figure~\ref{fig:myplot}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\linewidth]{plots/myplot.pdf}
+  \caption{A super plot}
+\label{fig:myplot}
+\end{figure}
+
+In the folder \texttt{./plots/}, there is an example of a CSV file of the temperature of Delft, taken somewhere.
+From this CSV, the plot is generated with the script \texttt{createplot.py}.
 
 
 %%%
