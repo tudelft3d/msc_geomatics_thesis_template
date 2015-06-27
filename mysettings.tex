@@ -25,11 +25,6 @@
 
 \newcommand{\myISBN}{999--99--9999--999--9} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\ie}{i.e.}
-\newcommand{\eg}{e.g.}
-
 %-- for names for \autoref commands
 \def\chapterautorefname{Chapter}
 \def\sectionautorefname{Section}
@@ -37,3 +32,38 @@
 \def\subsubsectionautorefname{Section}
 \def\algorithmautorefname{Algorithm}
  
+%-- for pdf metadata
+\hypersetup{pdfauthor={\myName}}
+\hypersetup{pdfkeywords={thesis, template}}
+\hypersetup{pdfsubject={A thesis submitted to the Delft University of Technology in partial fulfillment of the requirements for the degree of Master of Science in Geomatics}}
+\hypersetup{pdftitle={\myTitle}}
+
+%-- handy shortcuts
+\newcommand{\ie}{i.e.}
+\newcommand{\eg}{e.g.}
+
+
+%--
+% Following settings should be fixed, unless you know what you're doing
+%--
+
+%-- glossary settings, use full width
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength\glsdescwidth{0.8\hsize}
+
+%-- glossary settings, use dots
+\newcommand\Dotfill{\cftdotfill{\cftsecdotsep}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftsecdotsep}}
+\makeglossaries
+\renewcommand*\glspostdescription{\Dotfill}
+
+%-- for multiline chapter headings
+\renewcommand\formatchapter[1]{% 
+  \begin{minipage}[b]{0.15\linewidth}
+    \chapterNumber
+  \end{minipage}%
+  \begin{minipage}[b]{0.9\linewidth}
+    \raggedright\spacedallcaps{#1}
+  \end{minipage}
+} 
