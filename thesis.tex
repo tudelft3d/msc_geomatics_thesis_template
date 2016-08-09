@@ -7,13 +7,11 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[utf8]{inputenc} 
 \usepackage[square]{natbib}
-% \usepackage{subfig} 
 \usepackage{subcaption} 
 \usepackage{hyperref} 
 \usepackage[ruled,vlined,algochapter,linesnumbered]{algorithm2e}
 \usepackage{chngpage}
 \usepackage{calc}
-\usepackage{listings}
 \usepackage{ccicons} 
 \usepackage{xspace} 
 \usepackage{booktabs} 
@@ -23,8 +21,11 @@
 \usepackage{apalike}
 \usepackage[printonlyused,smaller,withpage]{acronym}
 
+
 \usepackage[floatperchapter,dottedtoc,eulerchapternumbers,pdfspacing,linedheaders]{classicthesis}
 \usepackage{arsclassica}
+
+\usepackage{pdfpages}
 
 \input{mysettings}
 
@@ -33,9 +34,19 @@
 \pagenumbering{roman}
 \pagestyle{plain}
 
+
+%******************************************************************
+% The cover page 
+% (it this needs to be manually edited and exported as a PDF)
+% (see folder README.txt in folder 'cover')
+%******************************************************************
+
+\includepdf{cover/cover_front.pdf}
+
 %******************************************************************
 % Frontmatter
 %******************************************************************
+
 \input{front/titlepage}
 \clearpage
 \input{front/titleback}
@@ -75,8 +86,10 @@
 
 \clearpage
 \include{back/colophon}
-% \clearpage
+\cleardoublepage
 % \input{back/Index}
+
+\includepdf{cover/cover_back.pdf}
 
 \end{document}
 
