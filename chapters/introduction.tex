@@ -26,8 +26,19 @@ If you run into mistakes/problems/issues, please report them on the GitHub page,
 Basically everything you need to know---from installation to details---is there:\\
 \url{http://en.wikibooks.org/wiki/LaTeX}
 
-To compile this template, you need a full installation of \href{http://miktex.org/about}{MiKTeX} (Windows) or \href{https://www.tug.org/texlive/}{TeXLive} (cross-platform) or \href{https://tug.org/mactex/}{MacTeX} (OSX). 
+To compile this template, you need a full installation of either:
+\begin{itemize}
+  \item \href{http://miktex.org/about}{MiKTeX} (Windows);
+  \item \href{https://tug.org/mactex/}{MacTeX} (MacOS). 
+  \item \href{https://www.tug.org/texlive/}{TeXLive} (Linux);
+ \end{itemize} 
 
+We suggest the following editors:
+\begin{itemize}
+  \item \href{http://www.texniccenter.org}{TeXnicCenter} (Windows);
+  \item TeXShop (MacOS), which is bundled with MacTeX;
+\end{itemize}
+but any text editor will do.
 
 %%%
 %
@@ -245,4 +256,14 @@ Further use, \ac{gis}, you'll get the acronym plus a hyperlink to the list in th
 Add yours to \texttt{front/acronyms.tex}.
 Notice that only these used are printed, \eg\ \ac{dt} and \ac{tin}.
 
+
+%%%
+%
+\section{Miscellaneous}
+\label{sec:misc}
+
+In the file \texttt{mysettings.tex}, there are some handy shortcuts.
+This is the way to properly write these abbreviations, \ie\ so that the spacing is correct.
+
+You should use one \texttt{-} for an hyphen between words (`multi-dimensional'), two \texttt{--} for a range between numbers (`1990--1995'), and three \texttt{---} for a punctuation in a sentence (`I like---unlike my father---to build multi-dimensional models').
 
