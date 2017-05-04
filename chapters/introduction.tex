@@ -140,6 +140,21 @@ Footnotes are a good way to write text that is not essential for the understandi
 
 %%%
 %
+\section{Equations}
+
+Equations and variables can be put inline in the text, but also numbered.
+
+Let $S$ be a set of points in $\mathbb{R}^d$. 
+The Voronoi cell of a point $p \in S$, defined $\mathcal{V}_{p}$, is the set of points $x \in \mathbb{R}^d$ that are closer to $p$ than to any other point in $S$; that is:
+\begin{equation}
+\mathcal{V}_p = \{x \in \mathbb{R}^{d} \ | \ \|x-p\| \, \leq \, \|x-q\|, \ \forall \, q \in S \}. 
+\end{equation}
+The union of the Voronoi cells of all generating points $p \in S$ form the Voronoi diagram of $S$, defined VD($S$).
+
+
+
+%%%
+%
 \section{Tables}
 
 The package \texttt{booktabs} permits you to make nicer tables than the basic ones in \LaTeX.
