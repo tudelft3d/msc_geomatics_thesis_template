@@ -16,3 +16,29 @@ But we hope it will encourage everyone to use LaTeX for writing their thesis, an
 Basically everything you need to know---from installation to details---is there available in [this free book](http://en.wikibooks.org/wiki/LaTeX).
 
 To compile this template, you need a full installation of [MiKTeX](http://miktex.org/about) (Windows) or [TeXLive](https://www.tug.org/texlive) (cross-platform) or [MacTeX](https://tug.org/mactex) (OSX). 
+
+
+## Which software to use?
+
+### Editors
+
+  - [TeXnicCenter](http://www.texniccenter.org) (Windows)
+  - [TeXStudio](https://www.texstudio.org/) (Windows)
+  - [TeXshop](http://pages.uoregon.edu/koch/texshop/) (macOS; which is bundled with MacTeX)
+
+### Managing references
+
+  - [JabRef](http://jabref.sourceforge.net) (cross-platform)
+  - [Mendeley](https://www.mendeley.com/) (online tool)
+
+### Drawing figures
+
+  - Adobe Illustrator (nice, but €€€)
+  - [Inkscape](https://inkscape.org/en/) (cross-platform)
+  - [IPE](http://ipe.otfried.org/) (cross-platform; integrates LaTeX text; great for triangulation and geometric stuff)
+
+### Drawing flowcharts
+
+  - [draw.io](https://www.draw.io/)  
+
+
