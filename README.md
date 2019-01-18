@@ -29,7 +29,6 @@ To compile this template, you need a full installation of [MiKTeX](http://miktex
 ### Managing references
 
   - [JabRef](http://jabref.sourceforge.net) (cross-platform)
-  - [Mendeley](https://www.mendeley.com/) (online tool)
 
 ### Drawing figures
 
