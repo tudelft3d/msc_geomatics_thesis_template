@@ -1,4 +1,4 @@
-# MScGeomaticsThesisTemplate
+# MSc Geomatics Final Thesis Template
 
 A complete template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
 
@@ -16,6 +16,11 @@ But we hope it will encourage everyone to use LaTeX for writing their thesis, an
 Basically everything you need to know---from installation to details---is there available in [this free book](http://en.wikibooks.org/wiki/LaTeX).
 
 To compile this template, you need a full installation of [MiKTeX](http://miktex.org/about) (Windows) or [TeXLive](https://www.tug.org/texlive) (cross-platform) or [MacTeX](https://tug.org/mactex) (OSX). 
+
+
+## Tips and tricks for LaTeX
+
+The file `chapters/introduction.tex` contains several tips that are useful when using LaTeX, read its source code!
 
 
 ## Which software to use?
