@@ -1,7 +1,12 @@
 
 \documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
-               headinclude,footinclude,BCOR5mm,%
+               headinclude,footinclude,%
                numbers=noenddot,cleardoublepage=empty]{scrreprt}
+
+\RequirePackage{silence} % :-\
+    \WarningFilter{scrreprt}{Usage of package `titlesec'}
+    \WarningFilter{scrreprt}{Activating an ugly workaround}
+    \WarningFilter{titlesec}{Non standard sectioning command detected}
 
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsthm}
