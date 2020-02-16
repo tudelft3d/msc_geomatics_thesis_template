@@ -3,17 +3,17 @@
                headinclude,footinclude,parskip=half,%
                numbers=noenddot,cleardoublepage=empty]{scrbook}
 
+\usepackage[utf8]{inputenc} 
 \usepackage{mathpazo} %-- use Palatino font
 \usepackage[left=25mm,top=25mm]{geometry}
-\usepackage{graphicx}
+% \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage[utf8]{inputenc} 
 \usepackage[square]{natbib}
 \usepackage{subcaption} 
 \usepackage{xspace}
 \usepackage{hyperref} 
 \usepackage[ruled,vlined,algochapter,linesnumbered]{algorithm2e}
-\usepackage{chngpage}
+% \usepackage{chngpage}
 \usepackage{calc}
 \usepackage{ccicons} 
 \usepackage{xspace} 
@@ -33,7 +33,6 @@
 \setcapindent{1em} %-- for captions of Figures
 % \setcounter{tocdepth}{\sectiontocdepth}
 
-\clearpage
 \subject{MSc thesis in Geomatics}
 \title{\myTitle}
 \author{\myName}
@@ -56,12 +55,13 @@
 %******************************************************************
 
 \includepdf{cover/cover_front.pdf}
+\cleardoublepage
 
 \maketitle[3]
 
 % \clearpage
 \input{front/titleback}
-% \clearpage
+\cleardoublepage
 \include{front/abstract}
 \include{front/acknow}
 % \pagestyle{scrheadings} 
