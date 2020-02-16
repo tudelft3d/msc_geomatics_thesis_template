@@ -1,5 +1,5 @@
 
-\documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
+\documentclass[10pt,a4paper,twoside,openright,fleqn,%
                headinclude,footinclude,parskip=half,%
                numbers=noenddot,cleardoublepage=empty]{scrbook}
 
@@ -61,7 +61,6 @@
 \cleardoublepage
 \include{front/abstract}
 \include{front/acknow}
-% \pagestyle{scrheadings} 
 \clearpage
 \include{front/contents}
 \clearpage
@@ -76,14 +75,6 @@
 \include{chapters/introduction}
 \include{chapters/relatedwork}
 
-% *****************************************************************
-% Backmatter
-%******************************************************************
-\backmatter 
-
-%- bibliography
-\bibliographystyle{apalike}
-\bibliography{myreferences}
 
 \appendix
 
@@ -93,6 +84,16 @@
 \include{appendices/reproducibility}
 %-- other examples of Appendix, not mandatory
 \include{appendices/someumldia}
+
+% *****************************************************************
+% Backmatter
+%******************************************************************
+\backmatter 
+
+%- bibliography
+\bibliographystyle{apalike}
+\bibliography{myreferences}
+
 
 
 \clearpage
