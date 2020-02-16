@@ -1,18 +1,16 @@
 
 \documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
-               headinclude,footinclude,%
-               numbers=noenddot,cleardoublepage=empty]{scrreprt}
+               headinclude,footinclude,parskip=half,%
+               numbers=noenddot,cleardoublepage=empty]{scrbook}
 
-\RequirePackage{silence} % :-\
-    \WarningFilter{scrreprt}{Usage of package `titlesec'}
-    \WarningFilter{scrreprt}{Activating an ugly workaround}
-    \WarningFilter{titlesec}{Non standard sectioning command detected}
-
+\usepackage{mathpazo} %-- use Palatino font
+\usepackage[left=25mm,top=25mm]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[utf8]{inputenc} 
 \usepackage[square]{natbib}
 \usepackage{subcaption} 
+\usepackage{xspace}
 \usepackage{hyperref} 
 \usepackage[ruled,vlined,algochapter,linesnumbered]{algorithm2e}
 \usepackage{chngpage}
@@ -25,20 +23,30 @@
 \usepackage{scrhack} % ignore warnings about deprecated KOMA-Script
 \usepackage{apalike}
 \usepackage[printonlyused,smaller,withpage]{acronym}
-
-
-\usepackage[floatperchapter,dottedtoc,eulerchapternumbers,pdfspacing,linedheaders]{classicthesis}
-\usepackage{arsclassica}
-
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
 \usepackage{pdfpages}
+
 
 \input{mysettings}
 
+\setcapindent{1em} %-- for captions of Figures
+% \setcounter{tocdepth}{\sectiontocdepth}
+
+\clearpage
+\subject{MSc thesis in Geomatics}
+\title{\myTitle}
+\author{\myName}
+\date{\myGraduationMonth\xspace\myGraduationYear}
+\publishers{A thesis submitted to the Delft University of Technology in partial fulfillment of the requirements for the degree of Master of Science in Geomatics}
 
 \begin{document}
-\pagenumbering{roman}
-\pagestyle{plain}
 
+
+%******************************************************************
+% Frontmatter
+%******************************************************************
+\frontmatter
 
 %******************************************************************
 % The cover page 
@@ -49,42 +57,40 @@
 
 \includepdf{cover/cover_front.pdf}
 
-%******************************************************************
-% Frontmatter
-%******************************************************************
+\maketitle
 
-\input{front/titlepage}
-\clearpage
+% \clearpage
 \input{front/titleback}
+% \clearpage
+\include{front/abstract}
+\include{front/acknow}
+% \pagestyle{scrheadings} 
 \clearpage
-\input{front/abstract}
-\input{front/acknow}
-\pagestyle{scrheadings} 
+\include{front/contents}
 \clearpage
-\input{front/contents}
-\clearpage
-\input{front/acronyms}
+\include{front/acronyms}
 \cleardoublepage
 
 %******************************************************************
 % Mainmatter
 %******************************************************************
-\pagenumbering{arabic}
-\input{chapters/introduction}
-\input{chapters/relatedwork}
+\mainmatter
+
+\include{chapters/introduction}
+\include{chapters/relatedwork}
 
 % *****************************************************************
 % Backmatter
 %******************************************************************
-\appendix
+\backmatter 
 
-%%%
 %- bibliography
 \bibliographystyle{apalike}
 \bibliography{myreferences}
 
+\appendix
+
 %%%
-%- 
 \cleardoublepage
 %-- *mandatory* appendix about the reproducibility
 \include{appendices/reproducibility}
@@ -95,7 +101,7 @@
 \clearpage
 \include{back/colophon}
 \cleardoublepage
-% \input{back/Index}
+
 
 \includepdf{cover/cover_back.pdf}
 
