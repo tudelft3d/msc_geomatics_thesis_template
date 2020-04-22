@@ -1,3 +1,8 @@
+%Remove some warnings that are created by arsclassica and have no effect
+\RequirePackage{silence}
+\WarningFilter{titlesec}{Non standard sectioning command}
+\WarningFilter{hyperref}{Option}
+\WarningFilter{tocloft}{\@starttoc has already been redefined}
 
 \documentclass[10pt,a4paper,twoside,openright,fleqn,%
                headinclude,footinclude,parskip=half,%
