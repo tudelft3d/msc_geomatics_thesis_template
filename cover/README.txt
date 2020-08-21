@@ -9,8 +9,7 @@ The cover (front + back) must be manually updated with your details and own figu
 If your figure has lighter colours, use the black logo of TU Delft provided.
 
 The font of the title is the TU Delft font ('TU Delft UltraLight') that is not installed by default on your system. It's free to download:
-- Windows: https://intranet.tudelft.nl/fileadmin/Files/medewerkersportal/mc/huisstijl/typografie/TUDelft-UltraLight.ttf
-- Mac: https://intranet.tudelft.nl/fileadmin/Files/medewerkersportal/mc/huisstijl/typografie/TUDelft-UltraLight.otf
+- https://www.tudelft.nl/huisstijl/downloads/
 
 Also, the blue used as the background could be changed for one of the 'approved' colours by the TU Delft style police: https://intranet.tudelft.nl/en/services/communication/manuals/tu-delft-corporate-design/colours/
 
