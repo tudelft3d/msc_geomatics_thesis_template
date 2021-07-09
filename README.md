@@ -4,7 +4,8 @@ A complete template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
 
 It contains all the parts that are required and is structured in such a way that most/all supervisors expect.
 Observe that the MSc Geomatics at TU Delft has no formal requirements, how the document looks like (fonts, margins, headers, etc) is entirely up to you. 
-We basically took the template `arsclassica` (by Lorenzo Pantieri), which is an adaption of the original `classicthesis package from André Miede, added the front/back matters (cover page, copyright, abstract, etc.), and gave examples for the insertion of figures, tables and algorithms.
+
+We basically took the template *KOMA-Script scrbook*, added the front/back matters (cover page, copyright, abstract, etc.), and gave examples for the insertion of figures, tables and algorithms.
 
 > It is not an official template and it is not mandatory to use it.
 
@@ -13,9 +14,9 @@ But we hope it will encourage everyone to use LaTeX for writing their thesis, an
 
 ## How to get started with LaTeX?
 
-Basically everything you need to know---from installation to details---is there available in [this free book](http://en.wikibooks.org/wiki/LaTeX).
+Follow the [Overleaf's Learn LaTeX in 30min](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) to start.
 
-To compile this template, you need a full installation of [MiKTeX](http://miktex.org/about) (Windows) or [TeXLive](https://www.tug.org/texlive) (cross-platform) or [MacTeX](https://tug.org/mactex) (OSX). 
+The only crucial thing missing from it is how to add references, for this we suggest you use "natbib" ([tutorial about bibliography management with natbib](https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib)).
 
 
 ## Tips and tricks for LaTeX
