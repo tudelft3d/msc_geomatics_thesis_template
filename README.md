@@ -8,9 +8,7 @@ Observe that the MSc Geomatics at TU Delft has no formal requirements, how the d
 
 We basically took the template *KOMA-Script scrbook*, added the front/back matters (cover page, copyright, abstract, etc.), and gave examples for the insertion of figures, tables and algorithms.
 
-> It is not an official template and it is not mandatory to use it.
-
-But we hope it will encourage everyone to use LaTeX for writing their thesis, and we also hope that it will *discourage* some from using Word.
+> It is not an official template and it is not mandatory to use it. But we hope it will encourage everyone to use LaTeX for writing their thesis, and we also hope that it will *greatly discourage* some from using Word.
 
 
 ## How to get started with LaTeX?
@@ -29,22 +27,22 @@ The file `chapters/introduction.tex` contains several tips that are useful when 
 
 ### Editors
 
+  - [Overleaf](https://www.overleaf.com/) (web; use your @tudelft.nl to get more features)
   - [TeXnicCenter](http://www.texniccenter.org) (Windows)
   - [TeXStudio](https://www.texstudio.org/) (Windows)
   - [TeXshop](http://pages.uoregon.edu/koch/texshop/) (macOS; which is bundled with MacTeX)
 
 ### Managing references
 
+  - [Zotero](https://www.zotero.org/) (web + cross-platform)
   - [JabRef](http://jabref.sourceforge.net) (cross-platform)
 
 ### Drawing figures
 
-  - Adobe Illustrator (nice, but €€€)
   - [Inkscape](https://inkscape.org/en/) (cross-platform)
   - [IPE](http://ipe.otfried.org/) (cross-platform; integrates LaTeX text; great for triangulation and geometric stuff)
+  - Adobe Illustrator (nice, but €€€)
 
 ### Drawing flowcharts
 
-  - [draw.io](https://www.draw.io/)  
-
-
+  - [draw.io](https://www.draw.io/)
