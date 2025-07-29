@@ -1,6 +1,7 @@
-# MSc Geomatics Final Thesis Template
 
-A complete template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
+# MSc Geomatics final thesis template (LaTeX)
+
+A complete LaTeX template for the [MSc Geomatics](http://geomatics.tudelft.nl) thesis.
 
 It contains all the parts that are required and is structured in such a way that most/all supervisors expect.
 Observe that the MSc Geomatics at TU Delft has no formal requirements, how the document looks like (fonts, margins, headers, etc) is entirely up to you. 
