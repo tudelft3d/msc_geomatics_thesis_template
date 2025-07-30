@@ -202,7 +202,7 @@ All your algorithms will be automatically added to the list of algorithms at the
     \For{$i \leftarrow 0$ \KwTo 3}
     {
       $\sigma_i \leftarrow$ get face opposite vertex $i$ in $\tau$\;
-      \If{Orient($\sigma_i, p$) $< 0$\nllabel{l:walk}} 
+      \If{Orient($\sigma_i, p$) $< 0$\nllabel{alg:walk:orient}} 
       {
         $\tau \leftarrow$ get neighbouring tetrahedron of $\tau$ incident to $\sigma_i$\;
         break\;
@@ -217,7 +217,7 @@ All your algorithms will be automatically added to the list of algorithms at the
   \caption[W\textsc{alk}]{W\textsc{alk} ($\mathcal{T}$, $\tau$, $p$)}%
 \label{alg:walk}
 \end{algorithm}
-Observe that you can put labels on certain lines (with \texttt{\nllabel{}}) and then reference to them: on line~\ref{l:walk} of the \autoref{alg:walk} this is happening.
+Observe that you can put labels on certain lines (with \texttt{\textbackslash nllabel{}}) and then reference  them: on line~\ref{alg:walk:orient} of the \autoref{alg:walk} this is happening (see \LaTeX source code).
 
 If you want to put some code (or XML for instance), use the package \texttt{listings}, \eg\ you can wrap it in a Figure so that it does not span over multiple pages.
 \begin{figure}
