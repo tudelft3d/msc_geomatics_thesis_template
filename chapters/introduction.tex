@@ -116,11 +116,27 @@ You include a PDF the same way as you do for a PNG, see \autoref{fig:pdffig},
 \section{How to add references?}
 
 References are best handled using Bib\TeX.
-See the \texttt{myreferences.bib} file. 
+See the \texttt{./refs/myreferences.bib} file. 
 A good cross-platform reference manager is \href{http://jabref.sourceforge.net/}{JabRef}.
 
 \citet{Descartes37} wrote this and that~\citep{Voronoi08,Delaunay34}.
-Instead of citing the whole paper~\citep{Delaunay34}, it is also possible to cite only the authors (\eg\ \citeauthor{Delaunay34}).
+Instead of citing the whole paper~\citep{Delaunay34}, it is also possible to cite only the authors (\eg\ \citeauthor{Aurenhammer12}).
+
+When adding references to your Bib\TeX file, it is good pratice to add the DOI of the paper.
+For example, for a paper:
+
+\begin{verbatim}
+@book{Aurenhammer12,
+  author = {Aurenhammer, Franz and Klein, Rolf and Lee, Der-Tsai},
+  doi = {10.1142/8685},
+  publisher = {World Scientific},
+  title = {Voronoi diagrams and {D}elaunay triangulations},
+  year = {2012}
+}
+\end{verbatim}
+
+Notice that if you use the field \texttt{doi} you shouldn't append \texttt{http://doi.org/}. 
+If you do this then you'll have clickable DOIs in your list of references. 
 
 %%%
 %
@@ -286,4 +302,3 @@ This is the way to properly write these abbreviations, \ie\ so that the spacing 
 And this is how you use an example, \eg\ like this.
 
 You should use one \texttt{-} for an hyphen between words (`multi-dimensional'), two \texttt{--} for a range between numbers (`1990--1995'), and three \texttt{---} for a punctuation in a sentence (`I like---unlike my father---to build multi-dimensional models').
-

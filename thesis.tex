@@ -7,13 +7,14 @@
 \usepackage[utf8]{inputenc} 
 \usepackage[sc]{mathpazo} %-- use Palatino font
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage[square]{natbib}
+\usepackage[round]{natbib}
 \usepackage{subcaption} 
 \usepackage{xspace}
 \usepackage[breaklinks=true,
             colorlinks=true,
             linktocpage=true,
             allcolors=colorforlinks]{hyperref} 
+\usepackage{doi}
 \usepackage[ruled,vlined,algochapter,linesnumbered]{algorithm2e}
 \usepackage{calc}
 \usepackage{ccicons} 
@@ -23,7 +24,7 @@
 \usepackage{listings}
 \usepackage{scrhack} % ignore warnings about deprecated KOMA-Script
 \usepackage[printonlyused,smaller,withpage]{acronym}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{todonotes}
@@ -98,8 +99,8 @@
 \backmatter 
 
 %- bibliography
-\bibliographystyle{apalike}
-\bibliography{myreferences}
+\bibliographystyle{refs/gm}
+\bibliography{refs/myreferences}
 
 
 
